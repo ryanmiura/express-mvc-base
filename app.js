@@ -26,11 +26,20 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Configuração da sessão
+// Configuração dos cookies
+app.use(cookieParser(process.env.COOKIE_SECRET));
+
+// Configuração da sessão
 app.use(session({
-    secret: 'express-mvc-secret',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false,
-    cookie: { secure: false } // Em produção, alterar para true se usando HTTPS
+    cookie: {
+        secure: process.env.NODE_ENV === 'production',
+        httpOnly: true,
+        sameSite: 'strict',
+        maxAge: 24 * 60 * 60 * 1000 // 24 horas
+    }
 }));
 
 // Importação das rotas
