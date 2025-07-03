@@ -1,9 +1,19 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const connectDB = require('./config/database');
 
 const app = express();
+
+// Conectar ao MongoDB
+connectDB().then(() => {
+    console.log('Banco de dados inicializado');
+}).catch(err => {
+    console.error('Erro ao inicializar o banco de dados:', err);
+    process.exit(1);
+});
 
 // Configuração do motor de templates HBS
 app.set('views', path.join(__dirname, 'views'));
