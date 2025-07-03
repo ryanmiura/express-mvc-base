@@ -4,14 +4,18 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const connectDB = require('./config/database');
+const { logger, requestLogger, handleUncaughtErrors } = require('./utils/logger');
 
 const app = express();
 
+// Configurar handler de erros não tratados
+handleUncaughtErrors();
+
 // Conectar ao MongoDB
 connectDB().then(() => {
-    console.log('Banco de dados inicializado');
+    logger.info('Banco de dados inicializado com sucesso');
 }).catch(err => {
-    console.error('Erro ao inicializar o banco de dados:', err);
+    logger.error('Erro ao inicializar o banco de dados:', err);
     process.exit(1);
 });
 
@@ -27,6 +31,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // Configuração dos middlewares
+app.use(requestLogger); // Logger de requisições HTTP
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -80,8 +85,20 @@ app.use((req, res, next) => {
 
 // Tratamento de erros gerais
 app.use((err, req, res, next) => {
+    // Log do erro com stack trace em desenvolvimento
+    if (process.env.NODE_ENV === 'development') {
+        logger.error('Erro na aplicação:', err);
+    } else {
+        // Em produção, log sem detalhes sensíveis
+        logger.error('Erro na aplicação:', {
+            message: err.message,
+            url: req.originalUrl,
+            method: req.method
+        });
+    }
+
     res.status(err.status || 500).render('error', {
-        message: err.message,
+        message: err.message || 'Ocorreu um erro interno no servidor',
         error: process.env.NODE_ENV === 'development' ? err : {}
     });
 });
