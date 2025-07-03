@@ -53,13 +53,22 @@ app.use(session({
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const authRoutes = require('./routes/auth.routes');
+const viewsRoutes = require('./routes/views.routes');
 
-// Rotas de autenticação
+// Middleware para variáveis locais nas views
+app.use((req, res, next) => {
+    res.locals.user = req.session?.user || null;
+    res.locals.messages = req.flash?.() || {};
+    next();
+});
+
+// Rotas de views (devem vir antes das rotas de API)
+app.use('/', viewsRoutes);
+
+// Rotas de API
 app.use('/api/auth', authRoutes);
-
-// Outras rotas
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api', indexRouter);
+app.use('/api/users', usersRouter);
 
 // Tratamento de erro 404
 app.use((req, res, next) => {
