@@ -70,6 +70,9 @@ app.use((req, res, next) => {
 // Rotas de views (devem vir antes das rotas de API)
 app.use('/', viewsRoutes);
 
+// Rotas de autenticação (sem prefixo /api)
+app.use('/auth', authRoutes);
+
 // Rotas de API
 app.use('/api/auth', authRoutes);
 app.use('/api', indexRouter);

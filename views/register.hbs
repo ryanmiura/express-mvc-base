@@ -5,7 +5,12 @@
                 <h3>Registro</h3>
             </div>
             <div class="card-body">
-                <form action="/api/auth/register" method="POST" onsubmit="return validateForm()">
+                {{#if error}}
+                <div class="alert alert-danger" role="alert">
+                    {{error}}
+                </div>
+                {{/if}}
+                <form action="/auth/register" method="POST" onsubmit="return validateForm()">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nome</label>
                         <input type="text" class="form-control" id="name" name="name" required minlength="3">

@@ -5,20 +5,23 @@ const User = require('../models/user.model');
  */
 const registerUser = async (req, res) => {
     try {
-        const { email, password, nome } = req.body;
+        const { email, password, name } = req.body;
+        const nome = name; // Mapear name para nome
 
         // Validação de entrada
         if (!email || !password) {
-            return res.status(400).json({ 
-                message: 'Email e senha são obrigatórios' 
+            return res.render('register', {
+                title: 'Registro',
+                error: 'Email e senha são obrigatórios'
             });
         }
 
         // Verifica se usuário já existe
         const existingUser = await User.findByEmail(email);
         if (existingUser) {
-            return res.status(400).json({ 
-                message: 'Este email já está em uso' 
+            return res.render('register', {
+                title: 'Registro', 
+                error: 'Este email já está em uso'
             });
         }
 
@@ -31,22 +34,14 @@ const registerUser = async (req, res) => {
 
         await user.save();
 
-        // Inicia a sessão
-        req.session.userId = user._id;
-
-        res.status(201).json({
-            message: 'Usuário registrado com sucesso',
-            user: {
-                id: user._id,
-                email: user.email,
-                nome: user.nome
-            }
-        });
+        // Redireciona para a página de login após registro bem-sucedido
+        res.redirect('/login');
 
     } catch (error) {
         console.error('Erro ao registrar usuário:', error);
-        res.status(500).json({ 
-            message: 'Erro ao registrar usuário' 
+        res.render('register', {
+            title: 'Registro',
+            error: 'Erro ao registrar usuário. Tente novamente.'
         });
     }
 };
@@ -60,43 +55,46 @@ const loginUser = async (req, res) => {
 
         // Validação de entrada
         if (!email || !password) {
-            return res.status(400).json({ 
-                message: 'Email e senha são obrigatórios' 
+            return res.render('login', {
+                title: 'Login',
+                error: 'Email e senha são obrigatórios'
             });
         }
 
         // Busca usuário
         const user = await User.findByEmail(email);
         if (!user) {
-            return res.status(401).json({ 
-                message: 'Email ou senha inválidos' 
+            return res.render('login', {
+                title: 'Login',
+                error: 'Email ou senha inválidos'
             });
         }
 
         // Verifica senha
         const isValidPassword = await user.comparePassword(password);
         if (!isValidPassword) {
-            return res.status(401).json({ 
-                message: 'Email ou senha inválidos' 
+            return res.render('login', {
+                title: 'Login', 
+                error: 'Email ou senha inválidos'
             });
         }
 
         // Cria sessão
         req.session.userId = user._id;
+        req.session.user = {
+            id: user._id,
+            email: user.email,
+            nome: user.nome
+        };
 
-        res.json({
-            message: 'Login realizado com sucesso',
-            user: {
-                id: user._id,
-                email: user.email,
-                nome: user.nome
-            }
-        });
+        // Redireciona para a página inicial após login bem-sucedido
+        res.redirect('/');
 
     } catch (error) {
         console.error('Erro ao fazer login:', error);
-        res.status(500).json({ 
-            message: 'Erro ao fazer login' 
+        res.render('login', {
+            title: 'Login',
+            error: 'Erro ao fazer login. Tente novamente.'
         });
     }
 };
@@ -109,24 +107,20 @@ const logoutUser = (req, res) => {
         // Destrói a sessão
         req.session.destroy((err) => {
             if (err) {
-                return res.status(500).json({ 
-                    message: 'Erro ao fazer logout' 
-                });
+                console.error('Erro ao fazer logout:', err);
+                return res.redirect('/');
             }
 
             // Limpa o cookie da sessão
             res.clearCookie('connect.sid');
             
-            res.json({ 
-                message: 'Logout realizado com sucesso' 
-            });
+            // Redireciona para a página de login
+            res.redirect('/login');
         });
 
     } catch (error) {
         console.error('Erro ao fazer logout:', error);
-        res.status(500).json({ 
-            message: 'Erro ao fazer logout' 
-        });
+        res.redirect('/login');
     }
 };
 

@@ -3,11 +3,28 @@ const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const { registerUser, loginUser, logoutUser } = require('../controllers/auth.controller');
 
-// Middleware de validação
-const validate = (req, res, next) => {
+// Middleware de validação para registro
+const validateRegister = (req, res, next) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        const errorMessages = errors.array().map(error => error.msg).join(', ');
+        return res.render('register', {
+            title: 'Registro',
+            error: errorMessages
+        });
+    }
+    next();
+};
+
+// Middleware de validação para login
+const validateLogin = (req, res, next) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        const errorMessages = errors.array().map(error => error.msg).join(', ');
+        return res.render('login', {
+            title: 'Login',
+            error: errorMessages
+        });
     }
     next();
 };
@@ -28,8 +45,8 @@ const authValidations = [
 ];
 
 // Rotas de autenticação
-router.post('/register', authValidations, validate, registerUser);
-router.post('/login', authValidations, validate, loginUser);
-router.get('/logout', logoutUser);
+router.post('/register', authValidations, validateRegister, registerUser);
+router.post('/login', authValidations, validateLogin, loginUser);
+router.post('/logout', logoutUser);
 
 module.exports = router;
