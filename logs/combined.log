@@ -1,0 +1,202 @@
+2025-07-03 02:16:01 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:17:16 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:20:46 [info]: Servidor rodando na porta 3000
+2025-07-03 02:20:46 [info]: Acesse: http://localhost:3000
+2025-07-03 02:20:46 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:20:52 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:20:52 [info]: GET / 500 7ms
+2025-07-03 02:21:29 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:21:29 [info]: GET / 500 20ms
+2025-07-03 02:21:29 [info]: GET /css/style.css 200 2ms
+2025-07-03 02:21:29 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:21:29 [info]: GET /favicon.ico 500 9ms
+2025-07-03 02:21:37 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:21:37 [info]: HEAD / 500 5ms
+2025-07-03 02:22:25 [info]: Servidor rodando na porta 3000
+2025-07-03 02:22:25 [info]: Acesse: http://localhost:3000
+2025-07-03 02:22:25 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:22:36 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:22:36 [info]: HEAD / 500 21ms
+2025-07-03 02:23:09 [info]: Servidor rodando na porta 3000
+2025-07-03 02:23:09 [info]: Acesse: http://localhost:3000
+2025-07-03 02:23:09 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:23:19 [info]: HEAD /login 200 19ms
+2025-07-03 02:23:29 [info]: GET / 302 3ms
+2025-07-03 02:23:29 [info]: GET /auth/login 404 8ms
+2025-07-03 02:23:29 [info]: GET /css/style.css 304 2ms
+2025-07-03 02:23:29 [info]: GET /favicon.ico 404 11ms
+2025-07-03 02:23:30 [info]: GET /auth/login 404 5ms
+2025-07-03 02:23:30 [info]: GET /css/style.css 304 1ms
+2025-07-03 02:23:39 [info]: GET /auth/login 404 5ms
+2025-07-03 02:23:39 [info]: GET /css/style.css 304 1ms
+2025-07-03 02:23:40 [info]: GET /auth/login 404 5ms
+2025-07-03 02:23:40 [info]: GET /css/style.css 304 1ms
+2025-07-03 02:23:43 [info]: GET /login 200 5ms
+2025-07-03 02:23:43 [info]: GET /css/style.css 304 1ms
+2025-07-03 02:23:51 [info]: GET /register 200 4ms
+2025-07-03 02:23:51 [info]: GET /css/style.css 304 1ms
+2025-07-03 02:24:53 [info]: Servidor rodando na porta 3000
+2025-07-03 02:24:53 [info]: Acesse: http://localhost:3000
+2025-07-03 02:24:53 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:24:57 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:24:57 [info]: GET / 500 21ms
+2025-07-03 02:24:57 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:24:57 [info]: GET / 500 6ms
+2025-07-03 02:24:57 [info]: GET /css/style.css 304 2ms
+2025-07-03 02:25:00 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:25:00 [info]: GET / 500 5ms
+2025-07-03 02:25:00 [info]: GET /css/style.css 304 0ms
+2025-07-03 02:25:06 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:25:06 [info]: HEAD / 500 5ms
+2025-07-03 02:25:37 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:25:37 [info]: HEAD /login 500 7ms
+2025-07-03 02:25:50 [info]: Servidor rodando na porta 3000
+2025-07-03 02:25:50 [info]: Acesse: http://localhost:3000
+2025-07-03 02:25:50 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:26:03 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:26:03 [info]: GET / 500 22ms
+2025-07-03 02:26:44 [info]: Servidor rodando na porta 3000
+2025-07-03 02:26:44 [info]: Acesse: http://localhost:3000
+2025-07-03 02:26:44 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:26:56 [error]: Erro na aplicação: secret option required for sessions
+Error: secret option required for sessions
+    at session (/app/node_modules/express-session/index.js:204:12)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+    at processParams (/app/node_modules/router/index.js:582:12)
+    at next (/app/node_modules/router/index.js:291:5)
+    at cookieParser (/app/node_modules/cookie-parser/index.js:46:14)
+    at Layer.handleRequest (/app/node_modules/router/lib/layer.js:152:17)
+    at trimPrefix (/app/node_modules/router/index.js:342:13)
+    at /app/node_modules/router/index.js:297:9
+2025-07-03 02:26:56 [info]: HEAD / 500 18ms
+2025-07-03 02:27:52 [info]: Servidor rodando na porta 3000
+2025-07-03 02:27:52 [info]: Acesse: http://localhost:3000
+2025-07-03 02:27:52 [info]: Banco de dados inicializado com sucesso
+2025-07-03 02:28:03 [info]: HEAD / 302 5ms
+2025-07-03 02:28:09 [info]: GET / 302 2ms
+2025-07-03 02:28:09 [info]: GET /login 304 17ms
+2025-07-03 02:28:09 [info]: GET /css/style.css 304 1ms
+2025-07-03 02:28:13 [info]: HEAD /login 200 4ms

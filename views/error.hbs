@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Erro - {{message}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="error-container">
+            <h1>{{error.status}}</h1>
+            <h2>{{message}}</h2>
+            
+            {{#if error.stack}}
+            <div class="error-details">
+                <h3>Detalhes do erro:</h3>
+                <pre>{{error.stack}}</pre>
+            </div>
+            {{/if}}
+            
+            <div class="error-actions">
+                <a href="/" class="btn">Voltar ao início</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

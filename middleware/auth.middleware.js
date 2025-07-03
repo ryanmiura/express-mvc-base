@@ -13,7 +13,7 @@ const isAuthenticated = (req, res, next) => {
         }
 
         // Usuário não está autenticado, redireciona para login
-        res.redirect('/auth/login');
+        res.redirect('/login');
     } catch (error) {
         console.error('Erro ao verificar autenticação:', error);
         res.status(500).json({

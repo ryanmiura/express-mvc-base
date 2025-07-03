@@ -63,7 +63,7 @@ const viewsRoutes = require('./routes/views.routes');
 // Middleware para variáveis locais nas views
 app.use((req, res, next) => {
     res.locals.user = req.session?.user || null;
-    res.locals.messages = req.flash?.() || {};
+    res.locals.messages = {};
     next();
 });
 
@@ -101,6 +101,13 @@ app.use((err, req, res, next) => {
         message: err.message || 'Ocorreu um erro interno no servidor',
         error: process.env.NODE_ENV === 'development' ? err : {}
     });
+});
+
+// Inicializar o servidor
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    logger.info(`Servidor rodando na porta ${PORT}`);
+    logger.info(`Acesse: http://localhost:${PORT}`);
 });
 
 module.exports = app;
