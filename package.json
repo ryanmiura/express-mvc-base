@@ -1,0 +1,30 @@
+{
+  "name": "express-mvc-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanmiura/express-mvc-base.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryanmiura/express-mvc-base/issues"
+  },
+  "homepage": "https://github.com/ryanmiura/express-mvc-base#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "handlebars": "^4.7.8",
+    "hbs": "^4.2.0",
+    "mongodb": "^6.17.0"
+  }
+}
