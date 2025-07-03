@@ -1,0 +1,23 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="mb-0">Bem-vindo!</h3>
+                    <form action="/api/auth/logout" method="POST" class="m-0">
+                        <button type="submit" class="btn btn-danger">Sair</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-info">
+                    <p class="mb-0">Você está logado com o e-mail: <strong>{{user.email}}</strong></p>
+                </div>
+                <div class="mt-4">
+                    <h4>Área Protegida</h4>
+                    <p>Esta é uma página protegida que só pode ser acessada por usuários autenticados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

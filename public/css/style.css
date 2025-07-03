@@ -1,0 +1,55 @@
+/* Estilos gerais */
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Estilos dos cards */
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: none;
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 1.25rem;
+}
+
+/* Estilos dos formulários */
+.form-label {
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilos dos botões */
+.btn-primary {
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-danger {
+    padding: 0.5rem 1.5rem;
+}
+
+/* Estilos das mensagens de alerta */
+.alert {
+    margin-bottom: 1.5rem;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -16,6 +16,13 @@ connectDB().then(() => {
 });
 
 // Configuração do motor de templates HBS
+const hbs = require('express-handlebars');
+app.engine('hbs', hbs.engine({
+    extname: '.hbs',
+    defaultLayout: 'main',
+    layoutsDir: path.join(__dirname, 'views/layouts'),
+    partialsDir: path.join(__dirname, 'views/partials')
+}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
