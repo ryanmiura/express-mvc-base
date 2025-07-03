@@ -33,10 +33,15 @@ app.use(session({
     cookie: { secure: false } // Em produção, alterar para true se usando HTTPS
 }));
 
-// Preparação para as rotas (a serem implementadas posteriormente)
+// Importação das rotas
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const authRoutes = require('./routes/auth.routes');
 
+// Rotas de autenticação
+app.use('/api/auth', authRoutes);
+
+// Outras rotas
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
